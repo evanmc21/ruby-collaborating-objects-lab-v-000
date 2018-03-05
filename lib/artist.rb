@@ -18,10 +18,11 @@ class Artist
   end
 
   def self.create_by_name(name)
-      artist = Artist.new(name)
-      artist.save
-      artist
+      self.new(name).tap {|artist| artist.save} #use tap to simplify the method chain.
     end
+
+  def self.find_by_name(name)
+    self.all.find {|artist| artist.name == name}
 
   def find_or_create_by_name(name)
 
