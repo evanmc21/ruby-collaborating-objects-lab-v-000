@@ -15,8 +15,8 @@ class Song
   end
 
   def artist_name=(name)
-    self.artist = Artst.find_or_create_by_name(name)
-    artist.add_song(self)
+    self.artist = Artst.find_or_create_by_name(name) #collaborate with artist class to send the artist's name to the artist class
+    artist.add_song(self) #assign the song to the artist and call on the add_song method to collaborate again now that we have the artist instance
   end
 
 end
