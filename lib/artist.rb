@@ -8,6 +8,9 @@ class Artist
     @songs = []
   end
 
+  def add_song(song)
+    @songs << song
+
   def find_or_create_by_name(name)
 
 end
