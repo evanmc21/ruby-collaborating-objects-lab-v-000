@@ -2,7 +2,7 @@ class MP3Importer
   attr_accessor :path
 
   @path = []
-  
+
   def initialize(directory)
     @path = directory
   end
@@ -12,5 +12,5 @@ class MP3Importer
     @files.delete_if{|file| file == "." || file == ".."}
   end
 
-  
+
 end
