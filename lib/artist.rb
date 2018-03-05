@@ -17,6 +17,10 @@ class Artist
     self
   end
 
+  def self.all
+    @@all
+  end
+
   def self.create_by_name(name)
       self.new(name).tap {|artist| artist.save} #use tap to simplify the method chain.
     end
